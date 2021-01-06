@@ -1,0 +1,529 @@
+var a;
+undefined
+typeof undefined;
+"undefined"
+typeof a;
+"undefined"
+var a1;
+undefined
+typeof a1;
+"undefined"
+var b = 100;
+undefined
+++b;
+101
+typeof a;
+"undefined"
+a = 100;
+100
+typeof a;
+"number"
+a= 100.20;
+100.2
+typeof a;
+"number"
+a = 1000000;
+1000000
+typeof a;
+"number"
+a = 1'
+VM349:1 Uncaught SyntaxError: Invalid or unexpected token
+a = 1;
+1
+typeof a;
+"number"
+a = Number.MAX_SAFE_INTEGER;
+9007199254740991
+a++;
+9007199254740991
+a;
+9007199254740992
+++a;
+9007199254740992
+a;
+9007199254740992
+++a;
+9007199254740992
+a;
+9007199254740992
+a = 9007199254740992n;
+9007199254740992n
+++a;
+9007199254740993n
+++a;
+9007199254740994n
+++a;
+9007199254740995n
+++a;
+9007199254740996n
+++a;
+9007199254740997n
+++a;
+9007199254740998n
+typeof a;
+"bigint"
+a + 545545n
+9007199255286543n
+a = 1000;
+1000
+typeof a;
+"number"
+a = 1000/0;
+Infinity
+a;
+Infinity
+typeof a;
+"number"
+a = 100;
+100
+b = "100";
+"100"
+typeof a;
+"number"
+typeof b;
+"string"
+a + b;
+"100100"
+a - b;
+0
+a * b;
+10000
+a/b;
+1
+a + b;
+"100100"
+a + parseInt(b);
+200
+typeof b;
+"string"
+typeof parseInt(b);
+"number"
+"Amit" + " Srivastava";
+"Amit Srivastava"
+"Amit" - " Srivastava";
+NaN
+10n + "100"
+"10100"
+"100" + 10n
+"10010"
+10 + 10 + "10"
+"2010"
+var x ;
+undefined
+var y = 100;
+undefined
+x;
+undefined
+y;
+100
+x + y;
+NaN
+"Amit" - 100;
+NaN
+"200" - 100
+100
+typeof NaN;
+"number"
+1000 + 2000 * "tax"
+NaN
+var z = 1000 + 2000 * "tax";
+undefined
+z;
+NaN
+isNaN(z);
+true
+isNaN(z)?0:z;
+0
+isFinite(100/0)
+false
+isFinite(100/0)?"Correct":0
+0
+a='Amit';
+"Amit"
+typeof a;
+"string"
+a = "Amit";
+"Amit"
+typeof a;
+"string"
+a = `mghdjkfghjkfhgjkdhfjkghfdjkhgjkfd
+ghdfkjghjkfdhgd
+ghdfjkhgk
+ghdfjkghkdf
+gdf`;
+"mghdjkfghjkfhgjkdhfjkghfdjkhgjkfd
+ghdfkjghjkfdhgd
+ghdfjkhgk
+ghdfjkghkdf
+gdf"
+a;
+"mghdjkfghjkfhgjkdhfjkghfdjkhgjkfd
+ghdfkjghjkfdhgd
+ghdfjkhgk
+ghdfjkghkdf
+gdf"
+var x = 100;
+undefined
+var y = 200;
+undefined
+var msg = "X is "+x+" and Y is "+y;
+undefined
+msg;
+"X is 100 and Y is 200"
+console.log(msg);
+VM2013:1 X is 100 and Y is 200
+undefined
+typeof console;
+"object"
+typeof console.log
+"function"
+msg = `X is ${x} and Y is ${y}`;
+"X is 100 and Y is 200"
+msg;
+"X is 100 and Y is 200"
+console.log(msg);
+VM2275:1 X is 100 and Y is 200
+undefined
+console;
+console {debug: ƒ, error: ƒ, info: ƒ, log: ƒ, warn: ƒ, …}
+var obj = {x : 100, y:200};
+undefined
+typeof obj;
+"object"
+typeof console;
+"object"
+x;
+100
+obj;
+{x: 100, y: 200}
+console
+console {debug: ƒ, error: ƒ, info: ƒ, log: ƒ, warn: ƒ, …}
+obj instanceof Object;
+true
+console instanceof Object;
+true
+typeof Object
+"function"
+Object.prototype;
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+var g = true;
+undefined
+typeof g;
+"boolean"
+g = false;
+false
+typeof g;
+"boolean"
+100 + true;
+101
+100 + true - false;
+101
+var w = {a:100, b:200};
+undefined
+typeof w;
+"object"
+var ff = [10,20,30];
+undefined
+typeof ff;
+"object"
+ff instanceof Array;
+true
+ff instanceof Object;
+true
+typeof Array;
+"function"
+var g = 1000;
+undefined
+var g1 = [10,20,30];
+undefined
+g1.push(1000);
+4
+g1;
+(4) [10, 20, 30, 1000]
+var f1 = new Number(1000);
+undefined
+typeof f1;
+"object"
+var f2 = 1000;
+undefined
+typeof f2;
+"number"
+var gg = [10,20,30];
+undefined
+typeof gg;
+"object"
+typeof f1;
+"object"
+var g2 = new String("Amit");
+undefined
+typeof g2;
+"object"
+g2.toUpperCase();
+"AMIT"
+var f3 = 1000;
+undefined
+f3.toPrecision()
+"1000"
+typeof f3;
+"number"
+f3;
+1000
+var f1 = new Number(1000);
+undefined
+f1;
+Number {1000}
+f1 + 1
+1001
+f1;
+Number {1000}
+f1 = f1 + 1;
+1001
+typeof f1;
+"number"
+Number f1;
+VM3967:1 Uncaught SyntaxError: Unexpected identifier
+var dd = new Number(1000);
+undefined
+typeof dd;
+"object"
+dd instanceof Number;
+true
+dd;
+
+Number {1000}
+dd = dd + 1;
+1001
+dd;
+1001
+typeof dd;
+"number"
+dd instanceof Number;
+false
+var name = "Amit";
+undefined
+var d1 = new Number(100);
+undefined
+d1;
+Number {100}
+var d2 = d1 + 100;
+undefined
+d2;
+200
+d1;
+Number {100}
+var d = Number(1000,2000,3000);
+undefined
+d;
+1000
+var d = Number(1000);
+undefined
+d;
+1000
+var d = new Number(1000);
+undefined
+d;
+Number {1000}
+var d = new Number(1000,2000,3000);
+undefined
+d;
+Number {1000}
+function test(){
+console.log('test call ');
+}
+undefined
+test(true, [10,20],{x:100},100,200);
+VM4862:2 test call 
+undefined
+function test(a){
+console.log('test call ',a);
+}
+undefined
+test(true, [10,20],{x:100},100,200);
+VM4951:2 test call  true
+undefined
+var d = Number(100,200,300);
+undefined
+d;
+100
+test(100);
+VM4951:2 test call  100
+undefined
+var t = new test(1000);
+VM4951:2 test call  1000
+undefined
+typeof t;
+"object"
+1000 + "Hello"
+"1000Hello"
+100n + 100n
+200n
+Number;
+ƒ Number() { [native code] }
+Number.prototype
+Number {0, constructor: ƒ, toExponential: ƒ, toFixed: ƒ, toPrecision: ƒ, …}
+function Number(){}
+
+undefined
+function Number(){
+console.log("I am Number");
+}
+
+undefined
+Number();
+VM5412:2 I am Number
+undefined
+var s = new Number();
+VM5412:2 I am Number
+undefined
+s;
+Number {}
+v = 1000;
+1000
+function Person(){
+var obj = {};
+obj.name = "Ram";
+obj.age = 21;
+obj.address='Delhi';
+return obj;
+}
+undefined
+var p = Person();
+undefined
+p;
+{name: "Ram", age: 21, address: "Delhi"}
+typeof p;
+"object"
+function Person(name , age , address){
+var obj = {};
+obj.name = name;
+obj.age = age;
+obj.address=address;
+return obj;
+}
+undefined
+var p = Person("Ramesh",21, "Delhi");
+undefined
+p;
+{name: "Ramesh", age: 21, address: "Delhi"}
+function Person(name , age , address){
+//var this = {};
+this.name = name;
+this.age = age;
+this.address=address;
+//return this;
+}
+var p= new Person('Shyam',22, 'Mumbai');
+undefined
+p;
+Person {name: "Shyam", age: 22, address: "Mumbai"}
+var g1 ;
+undefined
+var g4;
+undefined
+typeof g4;
+"undefined"
+p;
+Person {name: "Shyam", age: 22, address: "Mumbai"}
+p = null;
+null
+p.name;
+VM6265:1 Uncaught TypeError: Cannot read property 'name' of null
+    at <anonymous>:1:3
+(anonymous) @ VM6265:1
+p;
+null
+typeof p;
+"object"
+p = new Person("Mike",23,"Delhi");
+Person {name: "Mike", age: 23, address: "Delhi"}
+p;
+Person {name: "Mike", age: 23, address: "Delhi"}
+var bb = 100;
+undefined
+VM5412:2 I am Number
+bb = 0;
+0
+const cvv = 100;
+undefined
+VM5412:2 I am Number
+cvv =200;
+VM6603:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM6603:1
+function person(name){
+no=22; // global
+this.name = name+ no;
+console.log(name+no);
+}
+person('Ram');
+no = no + 2;
+VM6690:4 Ram22
+24
+person('Ram');
+VM6690:4 Ram22
+undefined
+no;
+22
+function calc(x,y){
+var z;
+function add(){
+    z = x + y;
+    return z;
+}
+function sub(){
+    z = x - y;
+    return z;
+}
+return [add,sub];
+}
+undefined
+function test2(){
+console.log('I am Test2 ');
+return 1000;
+}
+undefined
+typeof test2;
+"function"
+var n = test2;
+undefined
+typeof n;
+"function"
+test2();
+VM7044:2 I am Test2 
+1000
+n();
+VM7044:2 I am Test2 
+1000
+calc;
+ƒ calc(x,y){
+var z;
+function add(){
+    z = x + y;
+    return z;
+}
+function sub(){
+    z = x - y;
+    return z;
+}
+return [add,sub];
+}
+var d1 = calc(100,200);
+undefined
+typeof d1;
+"object"
+d1 instanceof Array;
+true
+d1[0];
+ƒ add(){
+    z = x + y;
+    return z;
+}
+d1[1];
+ƒ sub(){
+    z = x - y;
+    return z;
+}
+d1[0]();
+300
+d1[1]();
+-100
