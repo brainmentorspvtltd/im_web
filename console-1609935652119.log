@@ -1,0 +1,331 @@
+function calc(x,y){
+var z;
+function add(){
+    z = x + y;
+    return z;
+}
+function sub(){
+    z = x - y;
+    return z;
+}
+return [add,sub];
+}
+undefined
+x;
+VM24:1 Uncaught ReferenceError: x is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM24:1
+y;
+VM35:1 Uncaught ReferenceError: y is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM35:1
+var f = calc(100,200);
+undefined
+f[0]();
+300
+f[1]();
+-100
+x;
+VM159:1 Uncaught ReferenceError: x is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM159:1
+y;
+VM170:1 Uncaught ReferenceError: y is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM170:1
+var b2 = 1000;
+function test3(b2){
+console.log('B2 Arg is ',b2);
+var b2 = 2000;
+console.log('B2 is ',b2);
+}
+
+undefined
+b2;
+1000
+test3(3000);
+VM394:3 B2 Arg is  3000
+VM394:5 B2 is  2000
+undefined
+b2;
+1000
+b2;
+1000
+window.b2;
+1000
+typeof window;
+"object"
+window.test3;
+ƒ test3(b2){
+console.log('B2 Arg is ',b2);
+var b2 = 2000;
+console.log('B2 is ',b2);
+}
+this;
+Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+this.b2;
+1000
+this == window;
+true
+10 + undefined;
+NaN
+10 + null;
+10
+[] ==[]
+false
+100 == "100"
+true
+var b = 10;
+undefined
+++(++b);
+VM892:1 Uncaught SyntaxError: Invalid left-hand side expression in prefix operation
+100 === "100"
+false
+var mm ;
+undefined
+typeof mm;
+"undefined"
+m4;
+VM973:1 Uncaught ReferenceError: m4 is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM973:1
+typeof m4;
+"undefined"
+show();
+function show(){
+console.log(' I am Show ');
+}
+VM1072:3  I am Show 
+undefined
+show();
+function show(){
+console.log('G is ',g);
+if(10>2){
+var g = 100;
+}
+console.log(' I am Show ',g);
+}
+VM1152:3 G is  undefined
+VM1152:7  I am Show  100
+undefined
+
+var g1 = show();
+console.log('G1 is ',g1);
+function show(){
+console.log('G is ',g);
+if(10>2){
+var g = 100;
+}
+console.log(' I am Show ',g);
+return g;
+}
+
+VM1223:5 G is  undefined
+VM1223:9  I am Show  100
+VM1223:3 G1 is  100
+undefined
+function add(){
+console.log("I am Add ");
+}
+undefined
+add(10,20,30);
+VM1293:2 I am Add 
+undefined
+add(10,20,30,40,"50");
+VM1293:2 I am Add 
+undefined
+console.dir(add);
+VM1407:1 ƒ add()arguments: nullcaller: nulllength: 0name: "add"prototype: constructor: ƒ add()__proto__: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()__proto__: ƒ ()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()__proto__: Object[[FunctionLocation]]: <unknown>[[Scopes]]: Scopes[0][[FunctionLocation]]: VM1293:1[[Scopes]]: Scopes[1]
+undefined
+function add(){
+console.log("I am Add ",arguments.length);
+}
+undefined
+add(10,20,30,40,"50");
+VM1468:2 I am Add  5
+undefined
+add.name
+"add"
+typeof Object
+"function"
+typeof Function;
+"function"
+function add(){
+var sum = 0;
+for(let i= 0 ; i<arguments.length; i++){
+console.log(arguments[i]);
+}
+//console.log("I am Add ",arguments.length);
+}
+undefined
+add(10,20);
+VM1692:4 10
+VM1692:4 20
+undefined
+add(10,20,30,40,50,"60",true, [1000,2000]);
+VM1692:4 10
+VM1692:4 20
+VM1692:4 30
+VM1692:4 40
+VM1692:4 50
+VM1692:4 60
+VM1692:4 true
+VM1692:4 (2) [1000, 2000]
+undefined
+function add(){
+var sum = 0;
+console.log(typeof arguments);
+console.log(arguments instanceof Array);
+for(let i= 0 ; i<arguments.length; i++){
+console.log(arguments[i]);
+}
+//console.log("I am Add ",arguments.length);
+}
+undefined
+add(10,20,30,40,50,"60",true, [1000,2000]);
+VM1929:3 object
+VM1929:4 false
+VM1929:6 10
+VM1929:6 20
+VM1929:6 30
+VM1929:6 40
+VM1929:6 50
+VM1929:6 60
+VM1929:6 true
+VM1929:6 (2) [1000, 2000]
+undefined
+function add(){
+var sum = 0;
+console.log(typeof arguments);
+console.log(arguments instanceof Array);
+for(let i= 0 ; i<arguments.length; i++){
+sum+=arguments[i];
+//console.log(arguments[i]);
+}
+return sum;
+//console.log("I am Add ",arguments.length);
+}
+undefined
+add();
+VM1986:3 object
+VM1986:4 false
+0
+function add(){
+var sum = 0;
+//console.log(typeof arguments);
+//console.log(arguments instanceof Array);
+for(let i= 0 ; i<arguments.length; i++){
+sum+=arguments[i];
+//console.log(arguments[i]);
+}
+return sum;
+//console.log("I am Add ",arguments.length);
+}
+undefined
+add();
+0
+add(10,20,30);
+60
+add("10",20,"30");
+"0102030"
+add(10,20,"30");
+"3030"
+function add(){
+var sum = 0;
+//console.log(typeof arguments);
+//console.log(arguments instanceof Array);
+for(let i= 0 ; i<arguments.length; i++){
+sum+=parseInt(arguments[i]);
+//console.log(arguments[i]);
+}
+return sum;
+//console.log("I am Add ",arguments.length);
+}
+undefined
+add(10,20,"30");
+60
+add(10,20,"30","Amit");
+NaN
+function add(){
+var sum = 0;
+//console.log(typeof arguments);
+//console.log(arguments instanceof Array);
+for(let i= 0 ; i<arguments.length; i++){
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+//console.log(arguments[i]);
+}
+return sum;
+//console.log("I am Add ",arguments.length);
+}
+undefined
+add(10,20,"30","Amit");
+60
+function one(){
+return 1;
+}
+undefined
+function two(){
+return "2";
+}
+undefined
+function three(){
+return "three";
+}
+undefined
+parseInt(one);
+NaN
+add(one, two, three, 10,"20","Amit");
+30
+function add(){
+var sum = 0;
+//console.log(typeof arguments);
+//console.log(arguments instanceof Array);
+for(let i= 0 ; i<arguments.length; i++){
+if(typeof arguments[i]==="function"){
+arguments[i] = arguments[i]();
+}
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+//console.log(arguments[i]);
+}
+return sum;
+//console.log("I am Add ",arguments.length);
+}
+undefined
+add(one, two, three, 10,"20","Amit");
+33
+function add(){
+var sum = 0;
+//console.log(typeof arguments);
+//console.log(arguments instanceof Array);
+for(let i= 0 ; i<arguments.length; i++){
+if(typeof arguments[i]==="function"){
+arguments[i] = arguments[i]();
+}
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+//console.log(arguments[i]);
+}
+return sum;
+//console.log("I am Add ",arguments.length);
+}
+undefined
+function jQuery(){
+console.log('JQuery Fn ',arguments.length);
+}
+undefined
+jQuery('#id');
+VM2886:2 JQuery Fn  1
+undefined
+jQuery('.myclass');
+VM2886:2 JQuery Fn  1
+undefined
+jQuery(document);
+VM2886:2 JQuery Fn  1
+undefined
+jQuery(window);
+VM2886:2 JQuery Fn  1
+undefined
+var $ = jQuery;
+undefined
+$('#id')
+VM2886:2 JQuery Fn  1
+undefined

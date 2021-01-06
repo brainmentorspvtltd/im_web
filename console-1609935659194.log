@@ -1,0 +1,311 @@
+function add(...arg){
+console.log(args.length);
+}
+undefined
+add(10,20,30,"Two");
+VM921:2 Uncaught ReferenceError: args is not defined
+    at add (<anonymous>:2:13)
+    at <anonymous>:1:1
+add @ VM921:2
+(anonymous) @ VM974:1
+function add(...args){
+console.log(args.length);
+}
+undefined
+add(10,20,30,"Two");
+VM983:2 4
+undefined
+function add(...args){
+console.log(args instanceof Array);
+console.log(args.length);
+}
+undefined
+add(10,20,30,"Two");
+VM1048:2 true
+VM1048:3 4
+undefined
+function add(...args, ...args2){
+console.log(args instanceof Array);
+console.log(args.length);
+}
+VM1079:1 Uncaught SyntaxError: Rest parameter must be last formal parameter
+function add(...args){
+console.log(args instanceof Array);
+console.log(args.length);
+}
+undefined
+function add(x,...args){
+console.log('X is ',x);
+console.log(args instanceof Array);
+console.log(args.length);
+}
+undefined
+add(10,20,30,"Two");
+VM1165:2 X is  10
+VM1165:3 true
+VM1165:4 3
+undefined
+function add2(x,y){
+    return x + y;
+}
+undefined
+add2();
+NaN
+add2(100);
+NaN
+function add2(x,y){
+    console.log('X is ',x, ' y is ',y);
+    return x + y;
+}
+undefined
+add2(100);
+VM1319:2 X is  100  y is  undefined
+NaN
+function add2(x=0,y=0){
+    console.log('X is ',x, ' y is ',y);
+    return x + y;
+}
+undefined
+add2();
+VM1386:2 X is  0  y is  0
+0
+add2(100);
+VM1386:2 X is  100  y is  0
+100
+add2(90,20);
+VM1386:2 X is  90  y is  20
+110
+var f ;
+if(f==='undefined' || f==null || f=='' || f==0 || isNaN(f)){
+
+}
+undefined
+f = 100;
+if(f){
+console.log('Truthy');
+}
+else{
+    console.log('Falsy ');
+}
+VM1766:3 Truthy
+undefined
+f = undefined;
+undefined
+f = 100;
+if(f){
+console.log('Truthy');
+}
+else{
+    console.log('Falsy ');
+}
+VM1793:3 Truthy
+undefined
+f;
+100
+f = undefined;
+undefined
+
+if(f){
+console.log('Truthy');
+}
+else{
+    console.log('Falsy ');
+}
+VM1838:6 Falsy 
+undefined
+f;
+undefined
+f = null;
+null
+
+if(f){
+console.log('Truthy');
+}
+else{
+    console.log('Falsy ');
+}
+VM1877:6 Falsy 
+undefined
+f = 0;
+0
+
+if(f){
+console.log('Truthy');
+}
+else{
+    console.log('Falsy ');
+}
+VM1899:6 Falsy 
+undefined
+f = "";
+""
+
+if(f){
+console.log('Truthy');
+}
+else{
+    console.log('Falsy ');
+}
+VM1923:6 Falsy 
+undefined
+f = false;
+false
+
+if(f){
+console.log('Truthy');
+}
+else{
+    console.log('Falsy ');
+}
+VM1951:6 Falsy 
+undefined
+function add2(x=0,y=0){
+    console.log('X is ',x, ' y is ',y);
+    return x + y;
+}
+undefined
+function add2(x,y){
+    console.log('X is ',x, ' y is ',y);
+    x = x || 0;
+    y = y || 0;
+    return x + y;
+}
+undefined
+var x = 100;
+undefined
+x || 200
+100
+x = undefined;
+undefined
+x || 200
+200
+function add2(x,y){
+    console.log('X is ',x, ' y is ',y);
+    x = x || 0;
+    y = y || 0;
+    return x + y;
+}
+undefined
+add2(100,200);
+VM2091:2 X is  100  y is  200
+300
+add2();
+VM2091:2 X is  undefined  y is  undefined
+0
+var arr = [10,20,30];
+undefined
+var arr2 = [90,100,200,10];
+undefined
+var arr3 = [arr, arr2];
+undefined
+arr3;
+(2) [Array(3), Array(4)]
+var arr4 = [...arr, ...arr2];
+undefined
+arr4;
+(7) [10, 20, 30, 90, 100, 200, 10]
+var obj  = {id:1001, name:'Ram'};
+undefined
+var obj2 = {id:1002, city:'Delhi'};
+undefined
+var obj3 = {...obj, ...obj2};
+undefined
+obj3;
+{id: 1002, name: "Ram", city: "Delhi"}
+var temp = [12,11,37,35,20,24,21,32,3];
+undefined
+temp[0];
+12
+var temp2 = {"delhi":12,"mumbai":32};
+undefined
+temp2["delhi"];
+12
+temp2.delhi;
+12
+var e = {1:2, 2:3,3:3,4:5};
+undefined
+e.1;
+VM2802:1 Uncaught SyntaxError: Unexpected number
+e[1]
+2
+var e2 = {"a b":2, 2:3,3:3,4:5};
+undefined
+e2["a b"];
+2
+e2.a b;
+VM2906:1 Uncaught SyntaxError: Unexpected identifier
+var arr = [10,20,30,40,50,60];
+undefined
+var obj = {id:1001, name:'Ram'};
+undefined
+var w = arr[0];
+undefined
+w;
+10
+var [e,x,,,y] = arr;
+undefined
+e;
+10
+x;
+20
+y;
+50
+var obj = {id:1001, name:'Ram'};
+undefined
+var {id, name} = obj;
+undefined
+id;
+1001
+name;
+"Ram"
+var id = obj.id;
+undefined
+function test4({name,id}){
+console.log(`name is ${name} and id is ${id}`);
+}
+undefined
+var obj = {id:1001, name:'Ram'};
+test4(obj);
+VM3414:2 name is Ram and id is 1001
+undefined
+var [a,b] = [10,20];
+undefined
+a;
+10
+b;
+20
+[a,b] = [b,a];
+(2) [20, 10]
+a;
+20
+b;
+10
+var name = "Amit";
+undefined
+name.startsWith("A");
+true
+var songs = [];
+var x;
+function add()
+{ x=0;
+for (index = 0; index < songs.length; index++) { 
+    if (songs[index] ==arguments[0])
+    {    x=1;} 
+
+else
+{x=0;
+console.log("here");
+ songs.push(arguments[0]);
+}
+}
+for (index = 0; index < songs.length; index++){
+ console.log(songs[index]);
+}
+
+if(x==1)
+{return false;}
+else
+{return true;}
+
+}
+undefined
