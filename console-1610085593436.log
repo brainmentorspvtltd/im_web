@@ -1,0 +1,160 @@
+function User(userid, pwd, name, city){
+this.userid = userid;
+this.pwd = pwd;
+this.name = name;
+this.city = city;
+}
+User.prototype.print = function(){
+console.log(`Userid is ${this.userid} Pwd is ${this.pwd}`);
+}
+ƒ (){
+console.log(`Userid is ${this.userid} Pwd is ${this.pwd}`);
+}
+User.prototype;
+{print: ƒ, constructor: ƒ}
+var ram = new User('Ram','123','Ram Kumar','Delhi');
+undefined
+ram;
+User {userid: "Ram", pwd: "123", name: "Ram Kumar", city: "Delhi"}
+typeof ram;
+"object"
+ram instanceof User;
+true
+typeof User;
+"function"
+class ITUser{
+constructor(userid, pwd, name){
+this.userid = userid;
+this.pwd = pwd;
+this.name = name;
+}
+print(){
+console.log(`Userid is ${this.userid} Pwd is ${this.pwd}`);
+}
+}
+undefined
+var shyam = new ITUser('shyam','123','Shyam Kumar');
+undefined
+shyam;
+ITUser {userid: "shyam", pwd: "123", name: "Shyam Kumar"}
+typeof shyam;
+"object"
+shyam instanceof ITUser;
+true
+typeof ITUser;
+"function"
+ITUser.prototype.display = function(){
+console.log('Display Call ');
+}
+ƒ (){
+console.log('Display Call ');
+}
+class A{
+constructor(){
+this._a = 100;
+}
+}
+undefined
+typeof A;
+"function"
+function Person(name,age){
+    this.name = name;
+    this.age = age;
+}
+Person.prototype.print = function(){
+    console.log(`Name is ${this.name} Age is ${this.age}`);
+}
+ƒ (){
+    console.log(`Name is ${this.name} Age is ${this.age}`);
+}
+function Employee(id, salary){
+    this.id = id;
+this.salary = salary;
+}
+Employee.prototype.company = 'ABC';
+"ABC"
+var ram = new Employee(1001,9999);
+undefined
+ram;
+Employee {id: 1001, salary: 9999}id: 1001salary: 9999__proto__: company: "ABC"constructor: ƒ Employee(id, salary)__proto__: constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+ram.id;
+1001
+ram.company;
+"ABC"
+Person.prototype;
+{print: ƒ, constructor: ƒ}
+Person.prototype.country ='India';
+"India"
+Person.prototype;
+{country: "India", print: ƒ, constructor: ƒ}
+Employee.prototype;
+{company: "ABC", constructor: ƒ}company: "ABC"constructor: ƒ Employee(id, salary)__proto__: Object
+typeof Employee.prototype;
+"object"
+function Student(rollno , name){
+this.rollno = rollno;
+this.name = name;
+
+}
+undefined
+typeof Student;
+"function"
+Student.prototype;
+{constructor: ƒ}
+typeof Student.prototype;
+"object"
+Student.prototype.constructor;
+ƒ Student(rollno , name){
+this.rollno = rollno;
+this.name = name;
+
+}
+Employee.prototype.__proto__;
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+Employee.prototype.__proto__ == Object.prototype;
+true
+Employee.prototype.__proto__=Person.prototype;
+{country: "India", print: ƒ, constructor: ƒ}
+ram.country;
+"India"
+ram;
+Employee {id: 1001, salary: 9999}id: 1001salary: 9999__proto__: Personcompany: "ABC"constructor: ƒ Employee(id, salary)__proto__: country: "India"print: ƒ ()constructor: ƒ Person(name,age)__proto__: constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+ram;
+Employee {id: 1001, salary: 9999}
+var shyam = new Employee(1002, 8888);
+undefined
+ram;
+Employee {id: 1001, salary: 9999}
+ram.bonus = 4444;
+4444
+ram;
+Employee {id: 1001, salary: 9999, bonus: 4444}
+shyam;
+Employee {id: 1002, salary: 8888}
+ram.__proto__ == shyam.__proto__;
+true
+delete ram.salary;
+true
+ram;
+Employee {id: 1001, bonus: 4444}
+shyam;
+Employee {id: 1002, salary: 8888}
+ram.print();
+VM1502:6 Name is undefined Age is undefined
+undefined
+function Employee(id, salary){
+Person.call('RAM',21); //super
+    this.id = id;
+this.salary = salary;
+}
+Employee.prototype.company = 'ABC';
+"ABC"
+var ram = new Employee(1001,9999);
+undefined
+ram.__proto__;
+{company: "ABC", constructor: ƒ}
+Employee.prototype.__proto__=Person.prototype;
+{country: "India", print: ƒ, constructor: ƒ}
+ram.print();
+VM1502:6 Name is undefined Age is undefined
+undefined

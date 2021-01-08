@@ -1,0 +1,117 @@
+function Person(name, age){
+    console.log('Person get called ', name, age);
+    this.name = name;
+    this.age = age;
+    console.log(this);
+}
+Person.prototype.print = function(){
+    console.log(`Name is ${this.name} Age is ${this.age}`);
+}
+ƒ (){
+    console.log(`Name is ${this.name} Age is ${this.age}`);
+}
+function Employee(id, salary, name, age){
+Person.call(this,name, age ) //super
+    this.id = id;
+this.salary = salary;
+}
+Employee.prototype.company = 'ABC';
+ 
+"ABC"
+Employee.prototype.__proto__ = Person.prototype;
+{print: ƒ, constructor: ƒ}
+var ram = new Employee(1001,9999,'AA',21);
+VM14:2 Person get called  AA 21
+VM14:5 Employee {name: "AA", age: 21}
+undefined
+ram.print();
+VM14:8 Name is AA Age is 21
+undefined
+var obj = {id:1001, name:'Ram'};
+undefined
+var obj2 = {x:100,y:200};
+undefined
+var obj3 = {obj, obj2};
+undefined
+function B(){
+console.log('I am B');
+}
+undefined
+B.prototype;
+{constructor: ƒ}
+typeof B.prototype;
+"object"
+B.prototype.__proto__ ;
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+B.prototype.__proto__ = obj3 ;
+{obj: {…}, obj2: {…}}
+var c = new B();
+VM304:2 I am B
+undefined
+c.obj.id;
+1001
+c.obj2.x;
+100
+function whoAmI(){
+console.log('My Name is ',this.myName);
+}
+undefined
+window.whoAmI();
+VM675:2 My Name is  undefined
+undefined
+var myName = "Ram";
+undefined
+window.myName;
+"Ram"
+whoAmI();
+VM675:2 My Name is  Ram
+undefined
+var obj = {myName:'Shyam'};
+undefined
+typeof obj;
+"object"
+obj.myName;
+"Shyam"
+whoAmI.call(obj);
+VM675:2 My Name is  Shyam
+undefined
+function whoAmI(age,salary){
+console.log('My Name is ',this.myName, age , salary);
+}
+undefined
+whoAmI(21,9999); // window.whoAmI();
+VM1169:2 My Name is  Ram 21 9999
+undefined
+myName;
+"Ram"
+window.myName;
+"Ram"
+whoAmI.call(obj,21,8888);
+VM1169:2 My Name is  Shyam 21 8888
+undefined
+this;
+Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+window;
+Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+this == window;
+true
+whoAmI.call(window,1000,2000);
+VM1169:2 My Name is  Ram 1000 2000
+undefined
+whoAmI(10000,20000);
+VM1169:2 My Name is  Ram 10000 20000
+undefined
+var f1 = whoAmI.bind(obj);
+undefined
+typeof f1;
+"function"
+f1(21,8888);
+VM1169:2 My Name is  Shyam 21 8888
+undefined
+whoAmI(21,434);
+VM1169:2 My Name is  Ram 21 434
+undefined
+var gg = [1000,2000];
+whoAmI.apply(obj,gg);
+VM1169:2 My Name is  Shyam 1000 2000
+undefined

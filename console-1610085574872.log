@@ -1,0 +1,30 @@
+class A{
+    constructor(){
+    console.log('I am A Cons');
+}
+print(){
+console.log('I am Print');
+}
+}
+class B extends A{
+constructor(){
+super();
+console.log(' I am B Cons');
+}
+disp(){
+super.print();
+console.log('I am B Disp ');
+}
+}
+undefined
+var b = new B();
+VM290:3 I am A Cons
+VM290:12  I am B Cons
+undefined
+b.disp();
+VM290:6 I am Print
+VM290:16 I am B Disp 
+undefined
+class C extends A,B{
+}
+VM416:1 Uncaught SyntaxError: Unexpected token ','
