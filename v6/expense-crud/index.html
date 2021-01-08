@@ -12,68 +12,84 @@
     <script src="scripts/controllers/expensecontroller.js" ></script>
 </head>
 <body>
-    <h2>Expense TODO</h2>
-    <table >
+
+    <header id="header">
+        <h1>Expense TODO</h1>
+    </header>
+
+    <div class="numbers">
+        <h3>Total Records : <span id='total'></span>  Marked Records : <span id='mark'></span> UnMark Records : <span id='unmark'></span></h3>
+    </div>
+
+    <section id="section_1">
+        <div class="row">
+            <div class="col-1 col">
+                <table id="table_1">
+                    <tr>
+                        <td><label for="id">Id</label></td>
+                        <td><input id='id' placeholder="Type Id" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="name">Name</label></td>
+                        <td><input id='name' type="text" placeholder="Type Name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="price">Price</label></td>
+                        <td><input id='price' type="range" min="10" max="100" value="1" ><output>1</output></td>
+                    </tr>
+                    <tr>
+                        <td><label for="date">Date</label></td>
+                        <td><input id='date' type="date"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="color">Color</label></td>
+                        <td><input id='color' type="color"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="remarks">Remarks</label></td>
+                        <td><textarea id='remarks' placeholder="Type Remarks Here"  cols="1" rows="1"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                               
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-2 col">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Date</th>
+                            <th>Color</th>
+                            <th>Remarks</th>
+                            <th>Operations</th>
+                        </tr>
+                    </thead>
+                    <tbody id='expenses'>
+                        <!-- Dynamic Rows-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr>
+    </section>
+
+    <table id="buttons_table">
         <tr>
-            <td><label for="">Id</label></td>
-            <td><input id='id' placeholder="Type Id" type="text"></td>
+            <td><button id='add'>Add</button></td>
+            <td><button id='delete'>Delete</button></td>
+            <td><button id='search'>Search</button></td>
+            <td><button id="update">Update</button></td>
+            <td><button id="save">Save</button></td>
+            <td><button id="load">Load</button></td>
+            <td><button id="loadfromserver">Load From Server</button></td>
+            <td><button id="sort">Sort</button></td>
+            <td><button id="clearall">Clear All</button></td>
         </tr>
-        <tr>
-            <td><label for="">Name</label></td>
-            <td><input id='name' type="text" placeholder="Type Name"></td>
-        </tr>
-        <tr>
-            <td><label for="">Price</label></td>
-            <td><input id='price' type="range" min="10" max="100" value="1" ><output>1</output></td>
-        </tr>
-        <tr>
-            <td><label for="">Date</label></td>
-            <td><input id='date' type="date"></td>
-        </tr>
-        <tr>
-            <td><label for="">Color</label></td>
-            <td><input id='color' type="color"></td>
-        </tr>
-        <tr>
-            <td><label for="">Remarks</label></td>
-            <td><textarea id='remarks' placeholder="Type Remarks Here"  cols="30" rows="5"></textarea></td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                   <table>
-                       <tr>
-                           <td><button id='add'>Add</button></td>
-                           <!-- <td><button onclick="addExpense()" id='add'>Add</button></td> -->
-                           <td><button id='delete'>Delete</button></td>
-                           <td><button id='search'>Search</button></td>
-                           <td><button id="update">Update</button></td>
-                           <td><button id="save">Save</button></td>
-                           <td><button id="load">Load</button></td>
-                           <td><button id="loadfromserver">Load From Server</button></td>
-                           <td><button id="sort">Sort</button></td>
-                           <td><button id="clearall">Clear All</button></td>
-                       </tr>
-                   </table>
-            </td>
-        </tr>
-    </table>
-    <h3>Total Records are <span id='total'></span>  Marked Records <span id='mark'></span>  are UnMark Records are <span id='unmark'></span></h3>
-    <hr>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Date</th>
-                <th>Color</th>
-                <th>Remarks</th>
-                <th>Operations</th>
-            </tr>
-        </thead>
-        <tbody id='expenses'>
-            <!-- Dynamic Rows-->
-        </tbody>
     </table>
 
 </body>

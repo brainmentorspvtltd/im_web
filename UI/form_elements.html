@@ -1,0 +1,78 @@
+<!-- we are telling our browser that we are using html version 5 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta - data about data (summary) -->
+    <meta charset="UTF-8">
+    <!-- Internationalization -->
+
+    <!-- SEO - Search Engine Optimization -->
+    <meta name="keyword" content="html tutorial, best html tutorials, learn html">
+    <meta name="description" content="This page is about html form elements">
+    
+    <!-- for support of responsiveness (mobile-friendly) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Form Elements</h1>
+
+    <form action="#">
+        <table>
+            <tr>
+                <td>Enter your name</td>
+                <td>
+                    <input type="text" placeholder="Enter name" required 
+                    value="Ram" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter your email</td>
+                <td>
+                    <input autofocus type="email" autocomplete="off" 
+                    placeholder="Enter email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Password</td>
+                <td>
+                    <input type="password" placeholder="Enter password" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Age
+                </td>
+                <td>
+                    <input type="number" placeholder="Enter your age"
+                    min="18" max="50">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter DOB</td>
+                <td>
+                    <input type="date">
+                </td>
+            </tr>
+            <tr>
+                <td>Choose Range</td>
+                <td>
+                    <input type="range" value="0" min="1" max="40" step="1" 
+                     onchange="output.value = value">
+                    <output id="output">0</output>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="reset">
+                </td>
+                <td>
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>

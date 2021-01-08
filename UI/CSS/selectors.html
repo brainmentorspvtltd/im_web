@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div {
+            background-color: lightgray;
+        } */
+        #div_1 {
+            background-color: lightblue;
+        }
+        #div_2,
+        #div_3 {
+            background-color: lightgray;
+        }
+        /* #div_3 {
+            background-color: lightgray;
+        } */
+        
+        #heading_1 {
+            font-size: 40px;
+        }
+
+        .title {
+            font-size: 34px !important;
+        }
+        .primary_color {
+            color: blue;
+        }
+
+        #div_1 > h2 {
+            color: red;
+        }
+        
+        #div_1 .child_1 h2 {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Basic CSS</h1>
+
+    <!-- Id vs Class
+    ID
+    - uniquely identify an element
+    - represented by #
+    - an id cannot be repeated on a single page
+    - an element cannot have 2 or more ids
+    Class
+    - grouping of elements
+    - represented by .
+    - a class can be used or repeated any number of times
+    - an element can have any number of classes -->
+
+    <div id="div_1">
+        <!-- <h2 id="heading_1" class="primary_color">This heading is inside div_1</h2> -->
+        <h2 class="primary_color">This heading is inside div_1</h2>
+        <div class="child_1">
+            <h2>This heading is also a child of div_1 but inside child div</h2>
+        </div>
+        <h2 class="primary_color">This heading is inside div_1</h2>
+    </div>
+
+    <hr>
+
+    <div id="div_2">
+        <h2 class="title primary_color">This heading is inside div_2</h2>
+    </div>
+
+    <hr>
+
+    <div id="div_3">
+        <h2 class="title primary_color">This heading is inside div_3</h2>
+    </div>
+    
+</body>
+</html>

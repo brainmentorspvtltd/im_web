@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div_1, #div_2 {
+            border: 5px solid red;
+            /* position: relative; */
+            width: 40%;
+        }
+        .image {
+            position: relative;
+        }
+        img {
+            width: 100%;
+        }
+        .icon {
+            width: 10%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* right: 0px; */
+        }
+        /* .icon img {
+            width: 20%;
+        } */
+        .row {
+            display: flex;
+            /* justify-content: center; */
+            /* justify-content: space-between; */
+            /* justify-content: space-around; */
+            justify-content: space-evenly;
+        }
+        /* .col {
+            display: inline-block;
+        } */
+    </style>
+</head>
+<body>
+
+    <h1>Display Flex</h1>
+
+    <div class="row">
+        <div class="col" id="div_1">
+            <h2>This is heading</h2>
+            <div class="image">
+                <img src="https://static.toiimg.com/thumb/msid-76231570,width-1200,height-900,resizemode-4/.jpg" alt="image">
+                <div class="icon">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/play-213-386758.png" alt="">
+                </div>
+            </div>
+        </div>
+    
+        <div class="col" id="div_2">
+            <h2>This is heading</h2>
+            <div class="image">
+                <img src="https://static.toiimg.com/thumb/msid-76231570,width-1200,height-900,resizemode-4/.jpg" alt="image">
+                <div class="icon">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/play-213-386758.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
