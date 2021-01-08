@@ -1,0 +1,27 @@
+{
+	"mydata": [{
+		"id": "1001",
+		"name": "fhgdsjkg",
+		"price": "51",
+		"date": "2021-01-08",
+		"color": "#000000",
+		"remarks": "fdsfsdfdsf",
+		"markForDelete": false
+	}, {
+		"id": "1002",
+		"name": "fhgdsjkg",
+		"price": "51",
+		"date": "2021-01-08",
+		"color": "#000000",
+		"remarks": "fdsfsdfdsf",
+		"markForDelete": false
+	}, {
+		"id": "1003",
+		"name": "fhgdsjkg",
+		"price": "51",
+		"date": "2021-01-08",
+		"color": "#000000",
+		"remarks": "fdsfsdfdsf",
+		"markForDelete": false
+	}]
+}
